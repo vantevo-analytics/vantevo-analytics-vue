@@ -24,7 +24,6 @@ const VantevoPlugin: Plugin = function (context, inject) {
 
   inject('vantevo', {
     event: vantevo,
-    enableTracker: enableTracker,
     enableOutboundLinks: enableOutboundLinks,
     enableTrackFiles: enableTrackFiles,
   });
