@@ -1,7 +1,7 @@
 import VantevoAnalytics from 'vantevo-analytics-tracker';
 const VantevoPlugin = function (context, inject) {
     const moduleOptions = '<%= serialize(options) %>';
-    const { vantevo, enableTracker, enableTrackFiles, enableOutboundLinks } = VantevoAnalytics(moduleOptions);
+    const { vantevo, enableTracker, enableTrackFiles, enableOutboundLinks } = VantevoAnalytics(JSON.parse(moduleOptions));
     // active automatic tracker
     if (!moduleOptions.manualPageview) {
         enableTracker();
