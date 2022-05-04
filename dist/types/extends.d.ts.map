@@ -1,0 +1,1 @@
+{"version":3,"file":"extends.d.ts","sourceRoot":"","sources":["../../src/extends.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,cAAc,EAAE,MAAM,2BAA2B,CAAC;AAG3D,OAAO,QAAQ,aAAa,CAAC;IAEzB,UAAU,kBAAkB;QACxB,OAAO,CAAC,EAAE,cAAc,CAAA;KAC3B;CACJ"}

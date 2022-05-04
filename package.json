@@ -1,0 +1,36 @@
+{
+  "name": "vantevo-analytics-vue",
+  "version": "1.0.0-beta.1",
+  "description": "Official framework Vantevo Analytics for Vue & Nuxtjs",
+  "license": "MIT",
+  "author": "Vantevo Analytics",
+  "scripts": {
+    "build": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": "https://github.com/vantevo-analytics/vantevo-analytics-vue.git",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "keywords": [
+    "vantevo analytics",
+    "analytics",
+    "vantevo",
+    "vue",
+    "nuxt",
+    "plugin"
+  ],
+  "dependencies": {
+    "vantevo-analytics-tracker": "^1.0.1-beta.13"
+  },
+  "devDependencies": {
+    "@nuxt/types": "^2.15.8",
+    "typescript": "^4.5.5",
+    "vue": "^2.6.12",
+    "vuex": "^3.5.1",
+    "nuxt": "^2.15.0"
+  }
+}
