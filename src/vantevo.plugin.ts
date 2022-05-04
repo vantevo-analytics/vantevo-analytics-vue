@@ -1,3 +1,5 @@
+declare var window: any;
+
 const VueVantevo = {
   install(app: any, options: any) {
     var existScript = document.querySelector('#vantevo');
@@ -50,11 +52,11 @@ const VueVantevo = {
     }
 
     app.config.globalProperties.$vantevo = (event: any, meta: any, callbak: any) => {
-      var window: any;
       if (typeof window !== 'undefined' && window.vantevo) {
         return window.vantevo(event, meta, callbak);
       }
-      return "window.vantevo error call function.";
+      console.log("window.vantevo error call function.")
+      return;
     };
   },
 };
