@@ -1,1 +1,1 @@
-{"version":3,"file":"vantevo.plugin.d.ts","sourceRoot":"","sources":["../../src/vantevo.plugin.ts"],"names":[],"mappings":"AAAA,QAAA,MAAM,UAAU;iBACD,GAAG,WAAW,GAAG;CA0D/B,CAAC;AAEF,eAAe,UAAU,CAAC"}
+{"version":3,"file":"vantevo.plugin.d.ts","sourceRoot":"","sources":["../../src/vantevo.plugin.ts"],"names":[],"mappings":"AAEA,QAAA,MAAM,UAAU;iBACD,GAAG,WAAW,GAAG;CA0D/B,CAAC;AAEF,eAAe,UAAU,CAAC"}

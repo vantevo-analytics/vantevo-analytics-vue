@@ -40,11 +40,11 @@ const VueVantevo = {
             document.head.appendChild(s);
         }
         app.config.globalProperties.$vantevo = (event, meta, callbak) => {
-            var window;
             if (typeof window !== 'undefined' && window.vantevo) {
                 return window.vantevo(event, meta, callbak);
             }
-            return "window.vantevo error call function.";
+            console.log("window.vantevo error call function.");
+            return;
         };
     },
 };
