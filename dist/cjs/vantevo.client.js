@@ -14,11 +14,10 @@ const VantevoPlugin = function (context, inject) {
     }
     // automatic track files download
     if (moduleOptions.trackFiles) {
-        enableTrackFiles();
+        enableTrackFiles(moduleOptions.trackFiles, moduleOptions.saveExtesionFiles);
     }
     inject('vantevo', {
         event: vantevo,
-        enableTracker: enableTracker,
         enableOutboundLinks: enableOutboundLinks,
         enableTrackFiles: enableTrackFiles,
     });

@@ -3,12 +3,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.meta = void 0;
 const { resolve } = require('path');
 const defaultOptions = {
-    excludePath: [],
-    manualPageview: false,
-    dev: false,
-    outboundLinks: false,
-    trackFiles: false,
-    saveExtension: false
+    "excludePath": [],
+    "dev": false,
+    "hash": false,
+    "domain": null,
+    "manualPageview": false,
+    "outboundLinks": false,
+    "trackFiles": null,
+    "saveExtesionFiles": false,
+    "params": {}
 };
 const VantevoModule = function (moduleOptions) {
     const options = Object.assign(Object.assign({}, defaultOptions), moduleOptions);

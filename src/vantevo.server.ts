@@ -2,12 +2,15 @@ const { resolve } = require('path');
 import { Module, NuxtVantevoOptions } from '@nuxt/types'
 
 const defaultOptions = {
-  excludePath: [],
-  manualPageview: false,
-  dev: false,
-  outboundLinks: false,
-  trackFiles: false,
-  saveExtension: false
+  "excludePath": [],
+  "dev": false,
+  "hash": false,
+  "domain": null,
+  "manualPageview": false,
+  "outboundLinks": false,
+  "trackFiles": null,
+  "saveExtesionFiles": false,
+  "params": {}
 }
 
 const VantevoModule: Module<NuxtVantevoOptions> = function (moduleOptions) {
