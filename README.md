@@ -140,7 +140,7 @@ buildModules: [
 </script>
 ```
 
-## 404 Page not found
+### 404 Page not found
 
 For the management of the `404 - Page Not Found` page we have created a specific event. This function will automatically save a `404` event and the` pathname` of the page as a value.
 
@@ -173,7 +173,7 @@ You can use `enableTrackFiles()` by monitoring file downloads on a specific page
 </script>
 ```
 
-## Outbound links
+### Outbound links
 
 You can use `enableOutboundLinks()` by monitoring outbound links on a specific page.
 
