@@ -12,7 +12,7 @@ const VantevoPlugin = function (context, inject) {
     }
     // automatic track files download
     if (moduleOptions.trackFiles) {
-        enableTrackFiles(moduleOptions.trackFiles, moduleOptions.saveExtesionFiles);
+        enableTrackFiles(moduleOptions.trackFiles, moduleOptions.saveExtensionFiles);
     }
     inject('vantevo', {
         event: vantevo,

@@ -7,7 +7,7 @@ const defaultOptions = {
     "manualPageview": false,
     "outboundLinks": false,
     "trackFiles": null,
-    "saveExtesionFiles": false,
+    "saveExtensionFiles": false,
     "params": {}
 };
 const VantevoModule = function (moduleOptions) {

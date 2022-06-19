@@ -41,7 +41,7 @@ const VueVantevo = {
         script.setAttribute("data-param-track-files", options.trackFiles.join(",").split(" ").join(""))
       }
 
-      if (options.saveExtesionFiles) {
+      if (options.saveExtensionFiles) {
         script.setAttribute("data-param-save-extension", "")
       }
       let s = document.createElement('script');
