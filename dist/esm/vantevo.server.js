@@ -8,6 +8,11 @@ const defaultOptions = {
     "outboundLinks": false,
     "trackFiles": null,
     "saveExtensionFiles": false,
+    "trackEcommerce": false,
+    "scrScript": "https://vantevo.io/js/vantevo.js",
+    "scrScriptEcommerce": "https://vantevo.io/js/vantevo.ecommerce.js",
+    "proxyServer": "https://api.vantevo.io/event",
+    "proxyServerEcommerce": "https://api.vantevo.io/event-ecommerce",
     "params": {}
 };
 const VantevoModule = function (moduleOptions) {
