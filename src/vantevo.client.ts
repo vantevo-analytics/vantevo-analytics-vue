@@ -5,7 +5,7 @@ import VantevoAnalytics from 'vantevo-analytics-tracker'
 const VantevoPlugin: Plugin = function (context, inject) {
   const moduleOptions = '<%= serialize(options) %>' as any;
 
-  const { vantevo, enableTracker, enableTrackFiles, enableOutboundLinks } = VantevoAnalytics(JSON.parse(moduleOptions));
+  const { vantevo, enableTracker, enableTrackFiles, enableOutboundLinks, trackEcommerce } = VantevoAnalytics(JSON.parse(moduleOptions));
 
   // active automatic tracker
   if (!moduleOptions.manualPageview) {
@@ -24,6 +24,7 @@ const VantevoPlugin: Plugin = function (context, inject) {
 
   inject('vantevo', {
     event: vantevo,
+    trackEcommerce,
     enableOutboundLinks: enableOutboundLinks,
     enableTrackFiles: enableTrackFiles,
   });

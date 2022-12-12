@@ -2,7 +2,8 @@ declare var window: any;
 
 const VueVantevo = {
   install(app: any, options: any) {
-    var existScript = document.querySelector('#vantevo');
+    var existScript = document.querySelector('#vantevo-analytics');
+    var existScriptEcommerce = document.querySelector('#vantevo-analytics-ecommerce');
 
     if (!existScript) {
       let script = document.createElement('script');
@@ -51,6 +52,34 @@ const VueVantevo = {
       document.head.appendChild(s);
     }
 
+    if (!existScriptEcommerce && options.trackEcommerce) {
+      let script_ecommerce = document.createElement('script');
+      script_ecommerce.src = 'https://vantevo.io/js/vantevo-ecommerce.js';
+
+      if (options.scrScriptEcommerce) {
+        script_ecommerce.src = options.scrScriptEcommerce;
+      }
+
+      script_ecommerce.defer = true;
+      script_ecommerce.id = 'vantevo-analytics-ecommerce';
+
+      if (options.dev) {
+        script_ecommerce.setAttribute("data-param-dev", "")
+      }
+
+      if (options.domain) {
+        script_ecommerce.setAttribute("data-param-domain", options.domain)
+      }
+
+      let ec = document.createElement('script');
+      ec.type = 'text/javascript';
+      ec.appendChild(document.createTextNode("window.vantevo_ecommerce = window.vantevo_ecommerce || function() { (window.vantevo_ecommerce.data = window.vantevo_ecommerce.data || []).push(arguments)}"));
+
+      document.head.appendChild(script_ecommerce);
+      document.head.appendChild(ec);
+
+    }
+
     app.config.globalProperties.$vantevo = (event: any, meta: any, callbak: any) => {
       if (typeof window !== 'undefined' && window.vantevo) {
         return window.vantevo(event, meta, callbak);
@@ -58,6 +87,15 @@ const VueVantevo = {
       console.log("window.vantevo error call function.")
       return;
     };
+
+    app.config.globalProperties.$trackEcommerce = (event: any, values: any, callbak: any) => {
+      if (typeof window !== 'undefined' && window.vantevo_ecommerce) {
+        return window.vantevo_ecommerce(event, values, callbak);
+      }
+      console.log("window.vantevo_ecommerce error call function.")
+      return;
+    };
+
   },
 };
 
